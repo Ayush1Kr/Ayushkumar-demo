@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        font-size: 62.5%;
+      }
+      body {
+        height: 100vh;
+        display: grid;
+        place-items: center;
+        background-color: black;
+      }
+      /* bg color for loader : background-color: #865dff; */
+
+      .loader{
+        width: 20rem;
+        aspect-ratio: 1;
+        background-color: red ;
+        border-radius: 50%;
+        position: relative;
+        animation: loadercode 3s linear infinite reverse;
+      }
+      .loader::before{
+        content: "";
+        position: absolute;
+        width: 17rem;
+        aspect-ratio: 1;
+        left: 0;
+        top: 0;
+        background-color: black;
+        border-radius: 50%;
+
+      }
+      .loader::after{
+        content: "";
+        position: absolute;
+        width: 5rem;
+        aspect-ratio: 1;
+        left: 6.7rem;
+        top: -2.6rem;
+        background-color: red;
+        border-radius: 50%;
+        box-shadow: 2rem red;
+      }
+
+      @keyframes loadercode{
+        100%{
+            rotate: 360deg;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="loader"></div>
+  </body>
+</html>
